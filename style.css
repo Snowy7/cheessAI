@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+}
+.board {
+    display: inline-block;
+    width: 400px;
+    margin: auto
+}
+
+.info {
+    display: inline-block;
+    position: relative;
+    top: -200px;
+    min-width: 25%;
+    max-width: 25%;
+    margin-left: 5%;
+    margin-right: 2%;
+    background: #874647;
+    padding: 1.5%;
+    border: 5px solid #00ff9a;
+    border-radius: 2%;
+    color: white;
+    box-shadow: -10px 20px 10px #292929;
+}
+
+.info select{
+    background: #6270a4;
+    color: white;
+    border: 1px solid white;
+    font-size: 18px;
+    width: 50px;
+}
+
+.info span, .info label{
+    font-size: 24px;
+    padding: 1%;
+}
+
+.move-history {
+    display: inline-block;
+    /*position: relative;*/
+    top: -200px;
+    min-width: 20%;
+    margin-left: 5%;
+    margin-right: 2%;
+    background: #874647;
+    padding: 1.5%;
+    border: 5px solid #00ff9a;
+    border-radius: 2%;
+    color: white;
+    box-shadow: -10px 20px 10px #292929;
+    /* display: inline-block; */
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width: 670px){
+    .info{
+        display: flex;
+    }
+
+    .board{
+        display: flex;
+    }
+}
