@@ -187,6 +187,8 @@ var onDragStart = function (source, piece, position, orientation) {
 };
 
 var makeBestMove = function () {
+    document.getElementById('thinking').style.display = 'none';
+    document.getElementById('waiting').style.display = 'block';
     var bestMove = getBestMove(game);
     game.ugly_move(bestMove);
     board.position(game.fen());
@@ -242,6 +244,8 @@ var onDrop = function (source, target) {
     }
 
     renderMoveHistory(game.history());
+    document.getElementById('thinking').style.display = 'block';
+    document.getElementById('waiting').style.display = 'none';
     window.setTimeout(makeBestMove, 250);
 };
 

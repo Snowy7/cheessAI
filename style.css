@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    padding: 0;
 }
 .board {
     display: inline-block;
@@ -53,6 +54,91 @@ body{
     min-height: 300px;
     max-height: 300px;
     overflow-y: scroll;
+}
+
+#state .state{
+    font-size: 50px;
+    position: absolute;
+    padding: 0;
+    font-weight: 700;
+    top: 82%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+#thinking .loader{
+    font-size: 24px;
+    position: absolute;
+    padding: 0;
+    font-weight: 700;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+
+}
+
+#waiting{
+    font-size: 50px;
+    position: absolute;
+    padding: 0;
+    font-weight: 700;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+#thinking .loader h1{
+    margin-top: 0;
+    margin-right: 10px;
+    animation: loading 1.1s linear infinite;
+}
+
+/* Creating the dots */
+#thinking span{
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #1d1d1d;
+    animation: loading 1s linear infinite;
+}
+
+/* Creating the loading animation*/
+@keyframes loading {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(15px);
+    }
+    50%{
+        transform: translateX(-15px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
+}
+#thinking span:nth-child(1){
+    animation-delay: 0.1s;
+}
+#thinking span:nth-child(2){
+    animation-delay: 0.2s;
+}
+#thinking span:nth-child(3){
+    animation-delay: 0.3s;
+}
+#thinking span:nth-child(4){
+    animation-delay: 0.4s;
+}
+#thinking span:nth-child(5){
+    animation-delay: 0.5s;
 }
 
 @media screen and (max-width: 670px){
